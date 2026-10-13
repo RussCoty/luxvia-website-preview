@@ -1,0 +1,475 @@
+/*
+Theme Name: LuxVia
+Description: An editable, accessible block theme for the LuxVia memorial planning website.
+Version: 0.1.0
+Requires at least: 6.6
+Requires PHP: 7.4
+Text Domain: luxvia
+License: GPL-2.0-or-later
+*/
+:root {
+  --ink: #172b28;
+  --green: #215b48;
+  --muted: #51635e;
+  --line: #d8e2de;
+  --rose: #7b364d;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+body .wp-site-blocks {
+  padding: 0;
+}
+a {
+  color: var(--green);
+  text-underline-offset: 4px;
+}
+a:hover {
+  color: var(--rose);
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--rose);
+  outline-offset: 5px;
+}
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.13;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+h1 {
+  font-size: 76px;
+}
+h2 {
+  font-size: 44px;
+  margin: 0 0 24px;
+}
+h3 {
+  font-size: 28px;
+}
+p {
+  margin: 0 0 20px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+section[id] {
+  scroll-margin-top: 32px;
+}
+.lv-inner {
+  max-width: 1160px;
+  margin-inline: auto !important;
+  padding-inline: 32px;
+}
+.lv-header {
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+.lv-header > .wp-block-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.lv-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lv-brand figure {
+  margin: 0;
+  width: 64px;
+  flex-shrink: 0;
+}
+.lv-brand img {
+  display: block;
+}
+.lv-brand .wp-block-site-title {
+  font:
+    26px Georgia,
+    serif;
+  margin: 0;
+}
+.lv-brand .wp-block-site-title a {
+  text-decoration: none;
+  color: var(--ink);
+}
+.lv-header nav {
+  font-size: 15px;
+}
+.lv-header .wp-block-navigation__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lv-header nav a {
+  text-decoration: none;
+}
+.lv-hero {
+  position: relative;
+  min-height: 570px !important;
+  padding: 60px 0 !important;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+}
+.lv-hero > .wp-block-cover__image-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.lv-hero > .wp-block-cover__background {
+  opacity: 0 !important;
+}
+.lv-hero .wp-block-cover__inner-container {
+  width: 100%;
+  color: var(--ink) !important;
+}
+.lv-hero-copy {
+  max-width: 530px;
+}
+.lv-hero h1 {
+  margin: 8px 0 22px;
+}
+.lv-hero .lv-lead {
+  font-size: 25px;
+  line-height: 1.45;
+  max-width: 490px;
+}
+.lv-hero-copy > p:not(.lv-lead):not(.lv-eyebrow) {
+  max-width: 440px;
+}
+.lv-eyebrow {
+  font-size: 13px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.lv-lead {
+  font-size: 22px;
+  line-height: 1.5;
+}
+.lv-section {
+  padding-block: 80px;
+  margin-block: 0 !important;
+}
+.lv-section h2 {
+  max-width: 760px;
+}
+.lv-section-intro {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 20px;
+}
+.lv-soft {
+  background: #eef3f4;
+}
+.lv-green {
+  background: #215b48;
+  color: #fff;
+}
+.lv-green a {
+  color: #fff;
+}
+.lv-green .lv-eyebrow {
+  color: #d3e5db;
+}
+.lv-green h2 {
+  max-width: 650px;
+}
+.lv-green .lv-section-intro {
+  color: #e1ece5;
+}
+.wp-block-columns {
+  display: flex;
+  gap: 48px;
+}
+.wp-block-column {
+  flex: 1;
+  min-width: 0;
+}
+.lv-step {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.lv-step h3 {
+  margin: 10px 0 16px;
+}
+.lv-step p {
+  color: var(--muted);
+}
+.lv-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--rose);
+}
+.lv-divider {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+  margin-top: 28px;
+}
+.lv-kicker {
+  color: var(--rose);
+  font-size: 14px;
+  font-weight: 700;
+}
+.wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.wp-block-button__link {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  padding: 13px 22px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid var(--green);
+}
+.wp-block-button__link:hover {
+  background: #173f32;
+  color: white;
+}
+.is-style-outline .wp-block-button__link {
+  background: transparent;
+  color: var(--green);
+}
+.lv-green .wp-block-button__link {
+  background: white;
+  color: var(--green);
+  border-color: white;
+}
+.lv-note {
+  font-size: 14px;
+  color: var(--muted);
+}
+.lv-faq {
+  max-width: 860px;
+}
+.wp-block-details {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+}
+.wp-block-details:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.wp-block-details summary {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+.wp-block-details > p {
+  margin: 18px 0 0;
+  max-width: 730px;
+  color: var(--muted);
+}
+.lv-footer {
+  padding-block: 34px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+.lv-footer .wp-block-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.lv-footer p {
+  margin: 0;
+}
+.lv-footer a {
+  text-decoration: none;
+}
+.lv-page-title {
+  padding-top: 70px;
+}
+.lv-page-title h1 {
+  font-size: 52px;
+  max-width: 800px;
+}
+.lv-prose {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 32px 70px;
+}
+.lv-prose h2 {
+  font-size: 34px;
+  margin-top: 44px;
+}
+.lv-prose h3 {
+  font-size: 26px;
+}
+.lv-prose ul {
+  padding-left: 24px;
+}
+.lv-photo-credit {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  padding: 6px 20px;
+  color: var(--muted);
+}
+@media (max-width: 800px) {
+  .lv-header > .wp-block-group {
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .lv-header nav {
+    font-size: 14px;
+  }
+  .lv-header .wp-block-navigation__container {
+    gap: 12px;
+  }
+  .lv-brand .wp-block-site-title {
+    font-size: 22px;
+  }
+  .lv-brand figure {
+    width: 44px;
+  }
+  .lv-hero {
+    min-height: 570px !important;
+  }
+  .lv-hero-copy {
+    max-width: 400px;
+  }
+  .lv-hero h1 {
+    font-size: 62px;
+  }
+  .lv-hero .lv-lead {
+    font-size: 22px;
+  }
+  .wp-block-columns {
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .wp-block-column {
+    flex-basis: 100%;
+  }
+  .lv-section {
+    padding-block: 56px;
+  }
+}
+@media (max-width: 540px) {
+  .lv-inner {
+    padding-inline: 22px;
+  }
+  .lv-header > .wp-block-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .lv-header .wp-block-navigation__container {
+    gap: 12px 20px;
+  }
+  .lv-hero {
+    min-height: 560px !important;
+    padding: 40px 0 185px !important;
+    align-items: flex-start;
+  }
+  .lv-hero > .wp-block-cover__image-background {
+    object-position: 65% center;
+  }
+  .lv-hero-copy {
+    max-width: 100%;
+    background: rgba(245, 247, 248, 0.94);
+    padding: 20px 16px;
+  }
+  .lv-hero h1 {
+    font-size: 48px;
+  }
+  .lv-hero .lv-lead {
+    font-size: 21px;
+  }
+  .lv-hero p {
+    font-size: 16px;
+  }
+  .lv-hero .lv-eyebrow {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  .lv-section-intro,
+  .lv-lead {
+    font-size: 19px;
+  }
+  .lv-footer .wp-block-group {
+    display: block;
+  }
+  .lv-footer p + p {
+    margin-top: 16px;
+  }
+  .lv-page-title h1 {
+    font-size: 40px;
+  }
+  .lv-prose {
+    padding-inline: 22px;
+  }
+  .wp-block-details summary {
+    font-size: 18px;
+  }
+}
+@media (max-width: 540px) {
+  .lv-hero {
+    background: #eef3f4;
+  }
+  .lv-hero-copy {
+    background: none;
+    padding: 0;
+  }
+  .lv-hero > .wp-block-cover__image-background {
+    top: auto;
+    bottom: 0;
+    height: 185px;
+    object-position: right 70%;
+  }
+}
+.lv-skip {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 10;
+  background: #fff;
+  padding: 8px 16px;
+}
+.lv-skip:focus {
+  top: 8px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
