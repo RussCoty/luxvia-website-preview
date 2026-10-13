@@ -1,7 +1,7 @@
 /*
 Theme Name: LuxVia
 Description: An editable, accessible block theme for the LuxVia memorial planning website.
-Version: 0.1.0
+Version: 0.2.0
 Requires at least: 6.6
 Requires PHP: 7.4
 Text Domain: luxvia
@@ -206,6 +206,16 @@ section[id] {
 }
 .lv-green .lv-section-intro {
   color: #e1ece5;
+}
+.lv-green .lv-divider {
+  border-color: #719889;
+}
+.lv-green ol {
+  max-width: 850px;
+  padding-left: 24px;
+}
+.lv-green li {
+  margin-bottom: 16px;
 }
 .wp-block-columns {
   display: flex;
